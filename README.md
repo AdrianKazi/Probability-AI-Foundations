@@ -37,6 +37,8 @@ $$
 N(0,1):\quad f(x) = \frac{1}{\sqrt{2\pi}} \exp \Big( -\frac{x^2}{2} \Big)
 $$
 
+![IMAGE_DESCRIPTION](plots/2.1.jpg)
+
 ### Sampling with Reparametrization Trick
 
 Sampling takes single value from given distribution. For example if our distribution is $N(\mu=2.3, \sigma=2.1)$ then we take sample single $x$ from available $y$ values that belong to this distribution.

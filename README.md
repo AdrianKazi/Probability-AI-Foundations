@@ -80,7 +80,10 @@ $$
 Where:
 
 * $P(A\cap B)$ - Probability of $A$ and $B$ happens together  
-* $P(B)$ - Probability of $B$ happens  
+* $P(B)$ - Probability of $B$ happens
+
+![ ](plots/4.1.png)
+
 
 ### Bayes Rule
 
@@ -110,6 +113,8 @@ Here, $P(B \mid A)$ or $P(\text{fever} \mid \text{flu})$ is the probability that
 given that they truly have the flu — this must be provided externally (e.g., medical statistics).
 The whole idea of Bayes Rule is precisely to compute $P(\text{flu} \mid \text{fever})$ from $P(\text{fever} \mid \text{flu})$.
 
+![ ](plots/5.1.png)
+
 To sum up, Bayes Rule exists so that, having $P(B \mid A)$ and the prior $P(A)$,
 we can compute the posterior $P(A \mid B)$. Without $P(B \mid A)$,
 the posterior cannot be obtained.
@@ -132,6 +137,8 @@ $$
 \int^{10}_5 2z\;dz = [z^2]^{10}_5 = 100 - 25 = 75
 $$
 
+![ ](plots/6.1.png)
+
 * $2z$ is a straight line  
 * integral is an area under this line  
 
@@ -147,6 +154,8 @@ $f(z_1)\Delta z + f(z_2)\Delta z + \dots$
 The step size
 $\Delta z = z_{i+1} - z_i$
 represents the width of each rectangle. As the grid becomes finer, the sum converges to the true value of the integral. This allows us to approximate expectations and KL divergence numerically when closed-form solutions are not available.
+
+![ ](plots/6.2.png)
 
 As we can see integral is different for every example. The smaller Riemann's rectangles, the smaller error of integral.
 
@@ -173,6 +182,8 @@ Bayesian functions $p(y|z)p(z)$ have 2 components:
 
 The integral $\int p(y|z)p(z)\;dz$ is the area under the product function.
 
+![ ](plots/6.3.png)
+
 #### Unsolvable Integral
 
 $$
@@ -182,6 +193,8 @@ $$
 The integral is well-defined, but it does not admit a closed-form expression.
 The only way to evaluate such an integral is through numerical (empirical) methods.
 There is no elementary function that describes this integral.
+
+![ ](plots/6.4.png)
 
 #### Unsolvable Integral with Bayesian Function
 
@@ -200,6 +213,8 @@ Likelihood:
 $$
 p(y=1\mid x) = \sigma(x)
 $$
+
+![ ](plots/6.5.png)
 
 The prior and likelihood are individually integrable, but their product does not have a known closed-form solution.
 
@@ -222,6 +237,8 @@ $$
 
 This function is not solvable.
 
+![ ](plots/7.1.png)
+
 #### Solvable Function
 
 We approximate the posterior with a Gaussian:
@@ -232,6 +249,8 @@ q(z) = \frac{1}{\sqrt{2\pi\sigma^2}}
 -\frac{(z-\mu)^2}{2\sigma^2}
 \right)
 $$
+
+![ ](plots/7.2.png)
 
 #### Numerical KL
 
@@ -256,9 +275,13 @@ $$
 
 Negative ELBO is normal. What matters is that ELBO increases during optimization.
 
+![ ](plots/8.1.png)
+
 ### Variational Inference – Approximate Posterior
 
 We iteratively adjust parameters of $q(z)$ to maximize ELBO.
+
+![ ](plots/9.1.png)
 
 **Observed behavior:**
 
@@ -268,6 +291,8 @@ We iteratively adjust parameters of $q(z)$ to maximize ELBO.
 * Posterior is sharper than prior  
 
 ### PyTorch Implementation
+
+![ ](plots/10.1.png)
 
 Variational Inference implemented with:
 * reparameterization trick

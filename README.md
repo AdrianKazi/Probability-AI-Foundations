@@ -58,6 +58,8 @@ $$
 
 This transformation is differentiable with respect to $\mu$ and $\sigma$, which allows gradients to flow through the sampling process.
 
+![](plots/3.1.png)
+
 ### Conditional Probability
 
 Conditional probability answers the question: “how probable is A, given that B is true?”

@@ -37,7 +37,7 @@ $$
 N(0,1):\quad f(x) = \frac{1}{\sqrt{2\pi}} \exp \Big( -\frac{x^2}{2} \Big)
 $$
 
-![IMAGE_DESCRIPTION](plots/2.1.jpg)
+![Probabilities of Gaussian Distribution for N(0,1)](plots/2.1.png)
 
 ### Sampling with Reparametrization Trick
 

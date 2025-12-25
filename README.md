@@ -1,5 +1,8 @@
 # Probability AI Foundations
 
+For full code [View Notebook](https://github.com/AdrianKazi/Probability-AI-Foundations/blob/main/Probabilistic_AI_Paradigm_Theoretical_Minimum.ipynb)
+
+
 ---
 ---
 

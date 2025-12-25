@@ -1,5 +1,8 @@
 # Probability AI Foundations
 
+---
+---
+
 ## Intro
 
 While traditional Deep Learning relies on deterministic parameters optimized via gradient descent, Probabilistic AI explicitly represents uncertainty by modeling latent variables or parameters as random variables. Inference is performed by optimizing probabilistic objectives—most commonly the ELBO—using gradient-based optimization.
@@ -16,7 +19,12 @@ Because these functions are too complex to integrate directly, we introduce work
 
 Finally, by the Law of Large Numbers, expectations computed under this approximated distribution can be estimated with arbitrarily high numerical accuracy. While this does not guarantee that the approximation equals the true posterior, it ensures that we measure the approximation itself very precisely, which is sufficient for practical inference.
 
+---
+---
+
 ## Theoretical Minimum
+
+---
 
 ### Gaussian Distribution
 
@@ -40,6 +48,8 @@ $$
 
 ![Probabilities of Gaussian Distribution for N(0,1)](plots/2.1.png)
 
+---
+
 ### Sampling with Reparametrization Trick
 
 Sampling takes a single value from a given distribution. For example, if our distribution is $N(\mu=2.3, \sigma=2.1)$, then we take a single sample $x$ from the available values that belong to this distribution.
@@ -60,6 +70,8 @@ $$
 This transformation is differentiable with respect to $\mu$ and $\sigma$, which allows gradients to flow through the sampling process.
 
 ![](plots/3.1.png)
+
+---
 
 ### Conditional Probability
 
@@ -83,6 +95,7 @@ Where:
 
 ![ ](plots/4.1.png)
 
+---
 
 ### Bayes Rule
 
@@ -113,6 +126,8 @@ The whole idea of Bayes Rule is precisely to compute $P(\text{flu} \mid \text{fe
 To sum up, Bayes Rule exists so that, having $P(B \mid A)$ and the prior $P(A)$,
 we can compute the posterior $P(A \mid B)$. Without $P(B \mid A)$,
 the posterior cannot be obtained.
+
+---
 
 ### Integrals and Analytical Tractability
 
@@ -244,6 +259,8 @@ $$ \int \frac{e^{-x^2/2}}{1 + e^{-x}} dx $$
 
 does not have a known closed-form solution. There is no formula that solves this integral exactly, so it can only be evaluated using numerical (empirical) methods.
 
+---
+
 ### KL divergence
 
 $$ KL(q || p) = E_q \Big[log \frac{q(z)}{p(z)}\Big] $$
@@ -310,6 +327,8 @@ Finally, Variational Inference optimizes the parameters of $q(z)$ by maximizing 
 
 * $KL = \infty$ → completely incompatible distributions
 
+---
+
 ### ELBO
 
 Evidence Lower Bound (ELBO) is a function that we optimize in Probabilistic AI.
@@ -351,6 +370,8 @@ A negative ELBO is normal. What matters is not its absolute value, but whether E
 
 This ELBO value should be treated as a single point on the ELBO objective function. Variational Inference consists of iteratively optimizing this objective by adjusting the parameters of $q(z)$ so that the ELBO increases and approaches its maximum.
 
+---
+
 ### Variational Inference – Approximate Posterior
 
 We use Variational Inference to iteratively adjust the parameters of the variational distribution $q(z)$ in order to maximize the ELBO with respect to the model defined by $p(z)$.
@@ -368,6 +389,8 @@ This shows increasing confidence. The model is saying: “I am more and more cer
 
 Final plot: q(z) is much sharper than p(z)
 This means the posterior belief is much more precise than the prior belief. The data strongly constrains the latent variable, so uncertainty collapses.
+
+---
 
 ### PyTorch Implementation
 

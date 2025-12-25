@@ -1,9 +1,7 @@
 # Probability AI Foundations
 
-For full code [View Notebook](https://github.com/AdrianKazi/Probability-AI-Foundations/blob/main/Probabilistic_AI_Paradigm_Theoretical_Minimum.ipynb)
+For full code [View Notebook](https://github.com/AdrianKazi/Probability-AI-Foundations/blob/main/Probabilistic_AI_Paradigm_Theoretical_Minimum.ipynb).
 
-
----
 ---
 
 ## Intro
@@ -22,7 +20,6 @@ Because these functions are too complex to integrate directly, we introduce work
 
 Finally, by the Law of Large Numbers, expectations computed under this approximated distribution can be estimated with arbitrarily high numerical accuracy. While this does not guarantee that the approximation equals the true posterior, it ensures that we measure the approximation itself very precisely, which is sufficient for practical inference.
 
----
 ---
 
 ## Theoretical Minimum
